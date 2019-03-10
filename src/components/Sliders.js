@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import SimpleSlider from "./SimpleSlider";
+import "../App.css";
 
 const Sliders = () => (
   <div

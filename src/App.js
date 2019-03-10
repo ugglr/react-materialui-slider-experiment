@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
-import Sliders from "./components/Sliders";
 import "./App.css";
-import HeroHeader from "./components/HeroHeader";
+import HeroHeader from "./components/Material-UI-components/HeroHeader";
+
+/*
+###########Other potential imports###########
+import Sliders from "./components/Sliders";
+*/
 
 class App extends Component {
   render() {
@@ -10,7 +14,43 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <HeroHeader />
-        <Sliders />
+
+        <p>These are regular HTML sliders</p>
+
+        <div className="slide__container">
+          <form>
+            {/*Slider 1 */}
+            <div>
+              <label>Slider 1</label>
+              <input className="slider" type="range" />
+              <span>Value: </span>
+            </div>
+            {/*Slider 1 */}
+            <div>
+              <label>Slider 1</label>
+              <input className="slider" type="range" />
+              <span>Value: </span>
+            </div>
+            {/*Slider 1 */}
+            <div>
+              <label>Slider 1</label>
+              <input className="slider" type="range" />
+              <span>Value: </span>
+            </div>
+            {/*Slider 1 */}
+            <div>
+              <label>Slider 1</label>
+              <input className="slider" type="range" />
+              <span>Value: </span>
+            </div>
+            {/*Slider 1 */}
+            <div>
+              <label>Slider 1</label>
+              <input className="slider" type="range" />
+              <span>Value: </span>
+            </div>
+          </form>
+        </div>
       </div>
     );
   }
