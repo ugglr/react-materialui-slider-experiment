@@ -1,82 +1,25 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Slider from "@material-ui/lab/Slider";
+import SimpleSlider from "./SimpleSlider";
 
-const styles = {
-  root: {
-    width: 300
-  },
-  slider: {
-    padding: "22px 0px"
-  }
-};
+const Sliders = () => (
+  <div
+    style={{
+      marginLeft: "2rem",
+      marginTop: "2rem"
+    }}
+  >
+    <Typography id="label">Slider 1</Typography>
+    <SimpleSlider />
+    <Typography id="label">Slider 2</Typography>
+    <SimpleSlider />
+    <Typography id="label">Slider 3</Typography>
+    <SimpleSlider />
+    <Typography id="label">Slider 4</Typography>
+    <SimpleSlider />
+    <Typography id="label">Slider 5</Typography>
+    <SimpleSlider />
+  </div>
+);
 
-class Sliders extends React.Component {
-  state = {
-    value: 50
-  };
-
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
-
-  render() {
-    const { classes } = this.props;
-    const { value } = this.state;
-
-    return (
-      <div className={classes.root}>
-        <Typography id="label">Slider label</Typography>
-        <Slider
-          classes={{ container: classes.slider }}
-          value={value}
-          aria-labelledby="label"
-          onChange={this.handleChange}
-        />
-        <Typography id="label">Slider label</Typography>
-        <Slider
-          classes={{ container: classes.slider }}
-          value={value}
-          aria-labelledby="label"
-          onChange={this.handleChange}
-        />
-        <Typography id="label">Slider label</Typography>
-        <Slider
-          classes={{ container: classes.slider }}
-          value={value}
-          aria-labelledby="label"
-          onChange={this.handleChange}
-        />
-        <Typography id="label">Slider label</Typography>
-        <Slider
-          classes={{ container: classes.slider }}
-          value={value}
-          aria-labelledby="label"
-          onChange={this.handleChange}
-        />
-        <Typography id="label">Slider label</Typography>
-        <Slider
-          classes={{ container: classes.slider }}
-          value={value}
-          aria-labelledby="label"
-          onChange={this.handleChange}
-        />
-        <Typography id="label">Slider label</Typography>
-        <Slider
-          classes={{ container: classes.slider }}
-          value={value}
-          aria-labelledby="label"
-          onChange={this.handleChange}
-        />
-      </div>
-    );
-  }
-}
-
-Sliders.propTypes = {
-  classes: PropTypes.object.isRequired
-};
-
-export default withStyles(styles)(Sliders);
+export default Sliders;
