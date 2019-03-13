@@ -1,5 +1,7 @@
 .slide__container {
   width: 85%; /* Width of the outside container */
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .slider {
@@ -14,7 +16,6 @@
   transition: opacity 0.2s;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  margin-left: 2rem;
 }
 
 .slider::-webkit-slider-thumb {
