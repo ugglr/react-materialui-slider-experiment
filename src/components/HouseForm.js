@@ -64,6 +64,7 @@ class HouseForm extends React.Component {
           />
           <span>Value: {this.state.slider1}</span>
           <br />
+          <br />
 
           {/*Slider 2 */}
           <label>Slider 2</label>
@@ -78,6 +79,8 @@ class HouseForm extends React.Component {
             onChange={this.handleChange2}
           />
           <span>Value: {this.state.slider2}</span>
+          <br />
+          <br />
 
           {/*Slider 3 */}
           <label>Slider 3</label>
@@ -92,6 +95,8 @@ class HouseForm extends React.Component {
             onChange={this.handleChange3}
           />
           <span>Value: {this.state.slider3}</span>
+          <br />
+          <br />
 
           {/*Slider 4 */}
           <label>Slider 4</label>
@@ -106,6 +111,8 @@ class HouseForm extends React.Component {
             onChange={this.handleChange4}
           />
           <span>Value: {this.state.slider4}</span>
+          <br />
+          <br />
 
           {/*Slider 5 */}
           <label>Slider 5</label>

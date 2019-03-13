@@ -4,10 +4,11 @@ import Switch from "@material-ui/core/Switch";
 import "./App.css";
 import HeroHeader from "./components/Material-UI-components/HeroHeader";
 import HouseForm from "./components/HouseForm";
+import AptForm from "./components/AptForm";
 
 /*
 ###########Other potential imports###########
-import AptForm from "./components/AptForm";
+
 import Sliders from "./components/Sliders";
 */
 
@@ -38,14 +39,17 @@ class App extends Component {
         <Navbar />
         <HeroHeader />
         <br />
-        <Switch
-          checked={this.state.toggle}
-          onChange={this.handleToggle}
-          color="primary"
-        />
-        {}
-        Form 2
-        <HouseForm />
+        <p style={{ marginLeft: "2rem" }}>
+          Form1
+          <Switch
+            checked={this.state.toggle}
+            onChange={this.handleToggle}
+            color="primary"
+          />
+          Form2
+        </p>
+        {this.state.toggle && <AptForm />}
+        {this.state.toggle || <HouseForm />}
       </div>
     );
   }

@@ -4,7 +4,10 @@ class AptForm extends React.Component {
   state = {
     slider1: 20,
     slider2: 30,
-    sum: 40
+    slider3: 40,
+    slider4: 50,
+    slider5: 60,
+    sum: 200
   };
 
   handleChange1 = async e => {
@@ -13,6 +16,21 @@ class AptForm extends React.Component {
   };
 
   handleChange2 = async e => {
+    await this.setState({ slider2: e.target.value });
+    this.updateSum();
+  };
+
+  handleChange3 = async e => {
+    await this.setState({ slider2: e.target.value });
+    this.updateSum();
+  };
+
+  handleChange4 = async e => {
+    await this.setState({ slider2: e.target.value });
+    this.updateSum();
+  };
+
+  handleChange5 = async e => {
     await this.setState({ slider2: e.target.value });
     this.updateSum();
   };
@@ -41,8 +59,9 @@ class AptForm extends React.Component {
           />
           <span>Value: {this.state.slider1}</span>
           <br />
+          <br />
 
-          {/*Slider 1 */}
+          {/*Slider 2 */}
           <label>Slider 2</label>
           <input
             className="slider"
@@ -55,6 +74,54 @@ class AptForm extends React.Component {
             onChange={this.handleChange2}
           />
           <span>Value: {this.state.slider2}</span>
+          <br />
+          <br />
+
+          {/*Slider 3 */}
+          <label>Slider 3</label>
+          <input
+            className="slider"
+            type="range"
+            name="slider3"
+            min="1"
+            max="100"
+            step="1"
+            defaultValue="30"
+            onChange={this.handleChange3}
+          />
+          <span>Value: {this.state.slider3}</span>
+          <br />
+          <br />
+
+          {/*Slider 4 */}
+          <label>Slider 4</label>
+          <input
+            className="slider"
+            type="range"
+            name="slider4"
+            min="1"
+            max="100"
+            step="1"
+            defaultValue="30"
+            onChange={this.handleChange4}
+          />
+          <span>Value: {this.state.slider4}</span>
+          <br />
+          <br />
+
+          {/*Slider 5 */}
+          <label>Slider 5</label>
+          <input
+            className="slider"
+            type="range"
+            name="slider5"
+            min="1"
+            max="100"
+            step="1"
+            defaultValue="30"
+            onChange={this.handleChange5}
+          />
+          <span>Value: {this.state.slider5}</span>
           <br />
           <br />
 
